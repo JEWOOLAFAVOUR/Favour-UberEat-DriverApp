@@ -14,16 +14,24 @@ export default function App() {
       justifyContent: 'space-between'}}>
         <Image source={{
           uri: order.Restaurant.image
-        }} style={{width: '25%', height: '100%'}}/>
+        }} style={{width: '25%', height: '100%',
+         borderBottomLeftRadius: 10,
+          borderTopLeftRadius: 10}}/>
       <View style={{marginLeft:10}}>
-        <Text>{order.Restaurant.name}</Text>
-        <Text>{order.Restaurant.address}</Text>
-        <Text>{order.User.name}</Text>
-        <Text>{order.User.address}</Text>
+        <Text style={{
+          fontSize: 18, fontWeight: '500'
+        }}>{order.Restaurant.name}</Text>
+        <Text style={{color: 'grey'}}>{order.Restaurant.address}</Text>
+        <Text style={{marginTop: 10}}>Delivery Details:</Text>
+        <Text style={{color: 'grey'}}>{order.User.name}</Text>
+        <Text style={{color: 'grey'}}>{order.User.address}</Text>
       </View>
+      <View style={{backgroundColor: '#3fc060', borderBottomRightRadius: 10,
+          borderTopRightRadius: 10}}>
       <Entypo name='check' size={30} color='black'
         style={{marginLeft: 'auto'}}/>
-      </View>
+        </View>
+      </View> 
       <StatusBar style="auto" />
     </View>
   );
